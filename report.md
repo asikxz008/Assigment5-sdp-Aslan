@@ -17,7 +17,7 @@ No menu, factory, strategy registry or external library is needed.
 
 ## 2. UML class diagram
 
-![Strategy class diagram: Calculator, CalculationStrategy, three concrete strategies and Main](docs/class-diagram.png)
+![Strategy class diagram: Calculator, CalculationStrategy, three concrete strategies and Main](https://raw.githubusercontent.com/asikxz008/Assigment5-sdp-Aslan/main/docs/class-diagram.png)
 
 The diagram follows the Strategy structure on Refactoring.Guru, the website listed
 in the assignment [2]. It describes this implementation and is rendered locally

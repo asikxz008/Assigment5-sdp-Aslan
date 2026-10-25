@@ -56,8 +56,9 @@ added `MultiplyStrategy` and updated the client and source list.
 
 ## Report and verification
 
-`report.md` is the required Moodle report; keep its relative `docs/` folder beside
-it when viewing the image. It also includes the complete PlantUML source.
+`report.md` is the required Moodle report. Its UML image loads from this public
+repository, so the report can be uploaded separately; internet access is needed
+to display the image. It also includes the complete PlantUML source.
 `report.pdf` is a visual copy. `docs/class-diagram.puml`, `.svg` and `.png` contain
 the UML, based on the Refactoring.Guru resource in the assignment and rendered
 locally with PlantUML.

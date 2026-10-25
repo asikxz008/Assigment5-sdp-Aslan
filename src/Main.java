@@ -1,5 +1,6 @@
 import com.aitu.sdp.calculator.AddStrategy;
 import com.aitu.sdp.calculator.Calculator;
+import com.aitu.sdp.calculator.MultiplyStrategy;
 import com.aitu.sdp.calculator.SubtractStrategy;
 
 public final class Main {
@@ -9,5 +10,8 @@ public final class Main {
 
         calculator.setStrategy(new SubtractStrategy());
         System.out.println("Subtract: 12 - 4 = " + calculator.calculate(12, 4));
+
+        calculator.setStrategy(new MultiplyStrategy());
+        System.out.println("Multiply: 12 * 4 = " + calculator.calculate(12, 4));
     }
 }

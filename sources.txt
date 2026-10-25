@@ -3,3 +3,4 @@ src/com/aitu/sdp/calculator/CalculationStrategy.java
 src/com/aitu/sdp/calculator/Calculator.java
 src/com/aitu/sdp/calculator/AddStrategy.java
 src/com/aitu/sdp/calculator/SubtractStrategy.java
+src/com/aitu/sdp/calculator/MultiplyStrategy.java

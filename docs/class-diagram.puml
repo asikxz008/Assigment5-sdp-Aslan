@@ -1,0 +1,53 @@
+@startuml
+!pragma layout smetana
+set namespaceSeparator none
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam monochrome true
+skinparam defaultFontName Arial
+skinparam defaultFontSize 15
+hide empty members
+top to bottom direction
+title Assignment 5 - Strategy / Calculator
+
+class Main <<Client>> {
+  +{static} main(args: String[]): void
+}
+package com.aitu.sdp.calculator {
+  class Calculator <<Context>> {
+    -strategy: CalculationStrategy
+    +Calculator(strategy: CalculationStrategy)
+    +setStrategy(strategy: CalculationStrategy): void
+    +calculate(left: double, right: double): double
+  }
+  interface CalculationStrategy <<Strategy>> {
+    +calculate(left: double, right: double): double
+  }
+  class AddStrategy <<ConcreteStrategy>> {
+    +calculate(left: double, right: double): double
+  }
+  class SubtractStrategy <<ConcreteStrategy>> {
+    +calculate(left: double, right: double): double
+  }
+  class MultiplyStrategy <<ConcreteStrategy>> {
+    +calculate(left: double, right: double): double
+  }
+}
+Main ..> Calculator : creates / calls / configures
+Main ..> AddStrategy : creates
+Main ..> SubtractStrategy : creates
+Main ..> MultiplyStrategy : creates
+Calculator "0..*" --> "1" CalculationStrategy : strategy / delegates calculate
+CalculationStrategy <|.. AddStrategy : implements
+CalculationStrategy <|.. SubtractStrategy : implements
+CalculationStrategy <|.. MultiplyStrategy : implements
+legend bottom
+  + public; - private; underlined = static.
+  Solid arrow: navigable association; dashed arrow: dependency.
+  Dashed hollow triangle: interface realization.
+  Main is in the default package. Implicit constructors are omitted.
+  Constructor and setter reject null; setStrategy replaces only the active strategy.
+  Calculator.calculate returns strategy.calculate(left, right).
+  Structure follows Refactoring.Guru: refactoring.guru/design-patterns/strategy
+endlegend
+@enduml

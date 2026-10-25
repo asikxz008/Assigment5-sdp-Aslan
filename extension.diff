@@ -1,0 +1,34 @@
+diff --git a/src/Main.java b/src/Main.java
+index 16cf93a..ff9b67d 100644
+--- a/src/Main.java
++++ b/src/Main.java
+@@ -1,5 +1,6 @@
+ import com.aitu.sdp.calculator.AddStrategy;
+ import com.aitu.sdp.calculator.Calculator;
++import com.aitu.sdp.calculator.MultiplyStrategy;
+ import com.aitu.sdp.calculator.SubtractStrategy;
+ 
+ public final class Main {
+@@ -9,5 +10,8 @@ public final class Main {
+ 
+         calculator.setStrategy(new SubtractStrategy());
+         System.out.println("Subtract: 12 - 4 = " + calculator.calculate(12, 4));
++
++        calculator.setStrategy(new MultiplyStrategy());
++        System.out.println("Multiply: 12 * 4 = " + calculator.calculate(12, 4));
+     }
+ }
+diff --git a/src/com/aitu/sdp/calculator/MultiplyStrategy.java b/src/com/aitu/sdp/calculator/MultiplyStrategy.java
+new file mode 100644
+index 0000000..ae26ba2
+--- /dev/null
++++ b/src/com/aitu/sdp/calculator/MultiplyStrategy.java
+@@ -0,0 +1,8 @@
++package com.aitu.sdp.calculator;
++
++public final class MultiplyStrategy implements CalculationStrategy {
++    @Override
++    public double calculate(double left, double right) {
++        return left * right;
++    }
++}

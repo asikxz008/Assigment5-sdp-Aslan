@@ -1,0 +1,16 @@
+T1 PASS | addition = 16.0
+T2 PASS | addition with negative and zero = -3.0
+T3 PASS | fractional addition = 0.75
+T4 PASS | subtraction = 8.0
+T5 PASS | subtraction operand order = -8.0
+T6 PASS | fractional subtraction = 0.25
+T7 PASS | multiplication = 48.0
+T8 PASS | negative multiplication = -12.0
+T9 PASS | zero multiplication = 0.0
+T10 PASS | fractional multiplication = 0.125
+T11 PASS | switch back to addition = 16.0
+T12 PASS | same Calculator instance across switches
+T13 PASS | constructor rejects null
+T14 PASS | null replacement rejected; old strategy retained
+T15 PASS | independent implementation works without context changes
+SUMMARY: 15/15 PASS
